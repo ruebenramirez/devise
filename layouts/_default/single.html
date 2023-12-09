@@ -1,6 +1,16 @@
 {{ define "main" }}
-    <div class="pl-sm-4 ml-sm-5">
-        {{ .Content }}
+
+    <div class="pl-sm-2">
+        <div class="mb-3">
+            <h2 class="mb-0">{{ .Title }}</h3>
+            {{ if .Params.Subtitle }}
+            <h5>{{ .Params.Subtitle }}</h5>
+            {{ end }}
+        </div>
+
+        <article>
+            {{ .Content }}
+        </article>
     </div>
 
     {{ template "_internal/disqus.html" . }}
