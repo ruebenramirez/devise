@@ -15,7 +15,4 @@
     {{ $custom := $customTemplate | resources.ExecuteAsTemplate "css/custom.scss" . | toCSS | minify }}
     <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
     {{ end }}
-
-    {{ template "_internal/google_analytics.html" . }}
-    {{ template "_internal/google_analytics_async.html" . }}
 </head>
